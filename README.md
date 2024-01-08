@@ -132,7 +132,7 @@ DA# 물리 모델
 <div markdown="1">
 
     ```sql
-CREATE TABLE model (
+  CREATE TABLE model (
 	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
 	Model_name	VARCHAR(255)	NOT NULL COMMENT '차종명',
 	Model_description	TEXT NOT NULL COMMENT '차종 설명'
