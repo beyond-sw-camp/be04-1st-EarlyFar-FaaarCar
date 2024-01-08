@@ -232,7 +232,7 @@ CREATE TABLE Login_log (
 	Success_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '성공여부',
 	Attempt_date	DATE	NOT NULL COMMENT '시도날짜',
 	Attempt_time	TIME	NOT NULL COMMENT '시도시간',
-	Attempt_region	VARCHAR(255)	NOT NULL COMMENT '시도위치',
+	Attempt_IP	VARCHAR(255)	NOT NULL COMMENT '시도경로',
 	Member_ID	INT	NOT NULL COMMENT '회원ID',
 	CONSTRAINT pk_Login_log_ID PRIMARY KEY (Login_log_ID),
 	CONSTRAINT fk_Member_ID FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
@@ -312,7 +312,7 @@ CREATE TABLE Post (
 ) COMMENT = '게시물';
 
 
-CREATE TABLE Payment_History (
+CREATE TABLE Payment_history (
 	Payment_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '결제ID',
 	Payment_date	DATETIME	NOT NULL COMMENT '결제일',
 	Payment_method	VARCHAR(255)	NOT NULL COMMENT '결제수단',
@@ -323,7 +323,7 @@ CREATE TABLE Payment_History (
   FOREIGN KEY(Member_ID) References Member(Member_ID)
 ) COMMENT = '결제이력';
 
-CREATE TABLE Interested_Car (
+CREATE TABLE Interested_car (
 	Interested_Car_ID INT AUTO_INCREMENT COMMENT '구매관심차량ID',
 	Post_ID INT NOT NULL COMMENT '게시물ID',
 	Member_ID INT NOT NULL COMMENT '회원ID',
