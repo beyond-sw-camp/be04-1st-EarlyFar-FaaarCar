@@ -21,10 +21,10 @@
 
 한국 국토교통부 데이터 통합 채널에서 제공한 ‘자동차등록현황보고’ 통계에 따르면 전국적으로 자동차등록현황은 2010년을 기준으로 10년 동안 자동차에 대한 수요는 계속해서 증가하고 있다. 또한 국내 거대 규모 중고차 거래 플랫폼 중 하나인 KB차차차의 중고차 매물건수는 론칭했던 2016년 기준 15,247대에서 2018년에는 100,000대가 돌파되면서 2년 만에 8배 이상의 중고차 매물이 늘어 나는 것이 확인되었다. 결과적으로 중고차 시장의 급격한 성장으로 인해서, 수많은은 거래 및 정보가 생성되고 있고 이에 따라 중고차 관련 정보를 체계적으로 관리하여 금융 프로세스를 향상시킬 필요성이 생겼습니다.
 
-![1 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/eb73a9cb-412a-4cba-b16a-3fc0d82d9599)
+![img_reference_01](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/008288ed-4294-488f-9010-7a8689ad5ad9)
                                   *사진 1:자동차등록현황 및 이륜차신고현황*
 
-![2 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5769231a-a2c6-4485-8a4a-08540a48f0e0)
+![img_reference_02](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/82be86db-5b9f-491a-a15b-83dd63bf48fd)
                                      *사진 2: KB차차차 중고차 등록매물 건수*
 
 # 2. 프로젝트 작업 범위
@@ -118,17 +118,17 @@
 
 ## 3-2 개념 & 논리 모델링
 
-![4 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/a2d0b223-d35c-4a91-b17f-ad798da0dd53)
+![img_conceptual_model](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/045217ef-b9a9-4212-aa91-b7932ba4282d)
 
 개념 모델링
 
-![5 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5244fae5-ee7e-4072-8042-3a3a0b6b4a8b)
+![img_logical_model](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/b03c48f6-1596-4e5f-b285-cc946b91f521)
 
 DA# 논리 모델
 
 ## 3-3 물리 모델링
 
-![6 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/679900b8-54d8-4b47-b1ce-21b515c14e0d)
+![img_physical_model](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/b31ce7a6-d168-4507-b548-89253ca4ac6d)
 
 DA# 물리 모델
 
