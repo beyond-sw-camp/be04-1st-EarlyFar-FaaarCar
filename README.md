@@ -1,4 +1,4 @@
-# 멀리카아
+# 멀리카아(Faaar-Car)
 
 ![img_reference_09](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/blob/e7fe4e7cb4a1f53f0d6050c2820bd6c73bfb1758/image/%EB%A9%80%EB%A6%AC%EC%B9%B4%EC%95%84.png)
 
@@ -41,7 +41,7 @@
 
 ## 2-1 추진 계획
 
-                                             *테이블 1: 추진체계*
+*테이블 1: 추진체계*
 
 | 구분 | 조직 | 주요 역할 |
 | --- | --- | --- |
@@ -368,7 +368,27 @@ CREATE TABLE Reservation (
 <summary>TC_001</summary>
 	
 ```sql
-TC_001
+SELECT * FROM Member;
+
+INSERT INTO Member (
+  Member_ID, Member_name, Member_nickname, Member_password
+, Member_email, Member_phoneNum, Member_address, Member_birth
+, Member_sign_up_date, Member_coupon, Dealer_company, Dealer_region
+, Dealer_grade, Member_type, Member_blacklist, Restriction_date
+, Restriction_end_date, Login_fail_stack, Report_issue_stack
+, Login_restriction_check, Member_withdraw_check, Member_withdraw_date 
+)
+VALUES 
+(
+  NULL, 'test','test_nick','test_passwd'
+, 'test@gmail.com','010-5678-1234','서울','2023-1-1 00:00:00'
+, NOW(), NULL, 'test_company', 'test_region'
+, 1, 1,	NULL, NULL
+, NULL,	NULL, NULL
+, NULL, 0, NULL 
+);
+
+SELECT * FROM Member;
 ```
 
 </details>
@@ -377,26 +397,93 @@ TC_001
 <summary>TC_002</summary>
 	
 ```sql
-TC_002
+SELECT  
+       Member_id
+     , Member_withdraw_check 
+     , Member_withdraw_date
+  FROM Member 
+ WHERE Member_id = 4;
+	
+UPDATE
+       Member
+   SET Member_withdraw_check=1
+     , Member_withdraw_date=NOW()
+ WHERE Member_id = 4;
+
+SELECT  
+       Member_id
+     , Member_withdraw_check 
+     , Member_withdraw_date
+  FROM Member 
+ WHERE Member_id = 4;
 ```
+
 </details>
 
 <details>
 <summary>TC_003</summary>
 
 ```sql
-TC_003
+SELECT * FROM Login_log;
+
+INSERT INTO Login_log
+(
+  Success_check, Attempt_date, Attempt_time, Attempt_IP, Member_ID
+)
+Values
+(
+  1, NOW(), NOW(), '서울', 1
+);
+
+SELECT * FROM Login_log;
 ```
- 
+
 </details>
 
 <details>
-
-
 <summary>TC_004</summary>
 
 ```sql
-TC_004
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER LOGIN_FAIL_TR
+    AFTER INSERT 
+    ON Login_log
+    FOR EACH ROW
+BEGIN 
+    IF NEW.Success_check = 0 THEN
+        UPDATE Member
+           SET Login_fail_stack = Login_fail_stack + 1
+         WHERE Member_id = New.Member_id; 
+    END IF;
+END//
+ 
+DELIMITER;
+
+SELECT * FROM Login_log;
+
+SELECT
+       Member_id
+     , Login_fail_stack
+  FROM Member;
+
+INSERT INTO Login_log
+(
+  Success_check, Attempt_date, Attempt_time, Attempt_IP, Member_ID
+)
+VALUES
+(
+  0, NOW(), NOW(), '서울', 1
+);
+
+SELECT * FROM Login_log;
+
+SELECT
+       Member_id
+     , Login_fail_stack
+  FROM Member;
+
+SELECT * FROM Member;
 ```
 
 </details>
@@ -405,7 +492,22 @@ TC_004
 <summary>TC_005</summary>
 
 ```sql
-TC_005
+SELECT
+       Member_id
+     , Member_password
+  FROM Member
+ WHERE Member_id = 5;
+
+UPDATE
+       Member
+   SET Member_password='updatetest'
+ WHERE Member_id = 5;
+
+SELECT
+       Member_id
+     , Member_password
+  FROM Member
+ WHERE Member_id = 5;
 ```
 
 </details>
@@ -414,7 +516,25 @@ TC_005
 <summary>TC_006</summary>
 
 ```sql
-TC_006
+SELECT 
+       Member_id, Member_nickname, Member_email
+     , Member_Phonenum, Member_address 
+  FROM Member 
+ WHERE Member_id = 5;
+
+UPDATE
+       Member
+   SET Member_nickname='testnickname'
+     , Member_email='updatetest@gmail.com'
+     , Member_phonenum='010-8888-8888'
+     , Member_address='광주'
+ WHERE Member_id = 5;
+
+SELECT 
+       Member_id, Member_nickname, Member_email
+     , Member_Phonenum, Member_address 
+  FROM Member 
+ WHERE Member_id = 5;
 ```
 
 </details>
@@ -423,7 +543,11 @@ TC_006
 <summary>TC_007</summary>
 
 ```sql
-TC_007
+SELECT 
+       b.Member_name, a.Review_grade, a.Review_contents 
+  FROM Review a
+  JOIN Member b ON a.dealer_id = b.Member_id
+ WHERE a.dealer_id = 2;
 ```
 
 </details>
@@ -432,7 +556,73 @@ TC_007
 <summary>TC_008</summary>
 
 ```sql
-TC_008
+SELECT * FROM Car;
+SELECT * FROM Ownership_history;
+SELECT * FROM Accident_history;
+SELECT * FROM Inundation;
+
+-- Transaction 시작
+START TRANSACTION;
+
+-- 예시: 자동차 정보 삽입
+INSERT INTO Car
+(
+  Car_ID, Car_field, Car_model, Car_year, Car_mileage, Car_condition
+, Car_transmission, Car_oiltype, Car_engine, Car_fuel_efficiency
+, Accident_check, Inundation_check, Selling_price, Picture_URL
+, Picture_origin, Picture_rename, Model_ID, Insepction_record_URL
+)
+VALUES 
+(
+  99, 'Hyundai', 'Sonata', 2019, 50000, 'Good', 'Automatic'
+, 'Gasoline', '2.0L', 15, 0, 0, 20000, '/images/sonata.jpg'
+, 'sonata_original.jpg', 'sonata_rename.jpg', 'M2', '/inspection/M2'
+);
+
+-- 다른 테이블에도 삽입 또는 업데이트 등 필요한 작업 수행
+-- Ownership_history insert
+INSERT INTO Ownership_history
+(
+  Previous_Owner, Current_Owner, Ownership_start, Ownership_end
+, Reason_transfer, Descript_transfer, Car_ID
+)
+VALUES 
+(
+  '이재원', '이준형', '2021-04-03 09:00:00', '2023-03-15 17:30:00'
+, '직장 지역이동에 의한 판매', '차량 상태 우수, 주행거리 낮음', 99
+);
+
+-- Accident_history insert
+SELECT * FROM Accident_history;
+INSERT INTO Accident_history
+(
+  Accident_damage_degree, Accident_date
+, Insurance_claim_check, Car_ID
+)
+VALUES 
+(
+  2, '2022-05-20 16:00:00'
+, 1, 99
+);
+
+-- Inundation insert
+SELECT * from Inundation;
+INSERT INTO Inundation
+(
+  Inundation_degree, Inundation_date, Car_ID
+)
+VALUES 
+(
+  3, '2022-07-10 10:15:00', 99
+);
+
+-- Transaction 종료
+COMMIT;
+
+SELECT * FROM Car;
+SELECT * FROM Ownership_history;
+SELECT * FROM Accident_history;
+SELECT * FROM Inundation;
 ```
 
 </details>
@@ -441,7 +631,67 @@ TC_008
 <summary>TC_009</summary>
 
 ```sql
-TC_009
+-- Member 테이블에 대한 Trigger 정의
+DELIMITER //
+
+CREATE TRIGGER AfterReportUpdate
+    BEFORE UPDATE ON Member
+    FOR EACH ROW
+BEGIN
+  -- 누적신고횟수가 5의 배수일 때 제재 적용
+  IF NEW.Report_issue_stack % 5 = 0 AND NEW.Report_issue_stack < 30 THEN
+    SET NEW.Member_blacklist = 1;
+    SET NEW.Restriction_date = NOW();
+    SET NEW.Restriction_end_date = DATE_ADD(NOW(), INTERVAL NEW.Report_issue_stack DAY);
+  END IF;
+
+  -- 누적신고횟수가 30이 넘어가면 회원의 회원탈퇴 여부가 1(탈퇴)로 업데이트
+  IF NEW.Report_issue_stack >= 30 THEN
+    SET NEW.Member_withdraw_check = 1;
+    SET NEW.Member_withdraw_date = NOW();
+  END IF;
+END;//
+
+DELIMITER ;
+
+-- Trigger 적용 확인
+SELECT * FROM Member;
+INSERT INTO Member
+(
+  Member_ID, Member_name, Member_nickname, Member_password, Member_email, Member_phoneNum
+, Member_address, Member_birth, Member_sign_up_date, Member_coupon, Dealer_company
+, Dealer_region, Dealer_grade, Member_type, Member_blacklist, Restriction_date, Restriction_end_date
+, Login_fail_stack, Report_issue_stack, Login_restriction_check, Member_withdraw_check
+, Member_withdraw_date 
+)
+VALUES 
+(
+  99, '홍길동', '회원닉네임이영', 'qlalfqjsgh1234', 'hongmail@daum.net', '010-2222-5555'
+, '부산', '1993-1-3 00:00:00', NOW(), NULL, NULL, NULL 
+, NULL, 0, NULL,	NULL,	NULL,	NULL
+, 4, NULL,	0, NULL
+)
+,
+(
+  100, '홍구구', '회원닉네임이영', 'qlalfqjsgh1234', 'hongmail@daum.net', '010-2222-5555'
+, '대구', '1996-1-3 00:00:00',  NOW(), NULL, NULL, NULL
+, NULL, 0,	1, '2023-12-1 00:00:00', '2023-12-26 00:00:00'
+, NULL, 28, NULL, 0,	NULL
+);
+
+SELECT * FROM Member;
+
+UPDATE Member 
+   SET report_issue_stack = report_issue_stack + 1 
+ WHERE Member_ID IN (99, 100);
+
+SELECT * FROM Member;
+
+UPDATE Member
+   SET report_issue_stack = report_issue_stack + 5 
+ WHERE Member_ID IN (99, 100);
+
+SELECT * FROM Member;
 ```
 
 </details>
@@ -450,7 +700,13 @@ TC_009
 <summary>TC_010</summary>
 
 ```sql
-TC_010
+CREATE VIEW CarOwnershipView AS
+SELECT Car.Car_ID, Car.Car_model, Model.Model_name, Ownership_history.Current_Owner
+  FROM Car
+  JOIN Model ON Car.Model_ID = Model.Model_ID
+  JOIN Ownership_history ON Car.Car_ID = Ownership_history.Car_ID;
+
+SELECT * FROM CarOwnershipView;
 ```
 
 </details>
