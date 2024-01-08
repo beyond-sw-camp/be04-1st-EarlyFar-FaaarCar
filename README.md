@@ -1,5 +1,5 @@
 # be04-1st-EarlyFar-FaaarCar
-얼리멀리(Early & Far ) 3조입니다.
+얼리멀리(Early&amp;Far) 3조입니다.
 
 ---
 
@@ -13,12 +13,10 @@
 
 한국 국토교통부 데이터 통합 채널에서 제공한 ‘자동차등록현황보고’ 통계에 따르면 전국적으로 자동차등록현황은 2010년을 기준으로 10년 동안 자동차에 대한 수요는 계속해서 증가하고 있다. 또한 국내 거대 규모 중고차 거래 플랫폼 중 하나인 KB차차차의 중고차 매물건수는 론칭했던 2016년 기준 15,247대에서 2018년에는 100,000대가 돌파되면서 2년 만에 8배 이상의 중고차 매물이 늘어 나는 것이 확인되었다. 결과적으로 중고차 시장의 급격한 성장으로 인해서, 수많은은 거래 및 정보가 생성되고 있고 이에 따라 중고차 관련 정보를 체계적으로 관리하여 금융 프로세스를 향상시킬 필요성이 생겼습니다.
 
-![                                  *사진 1:자동차등록현황 및 이륜차신고현황*](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/77a5173f-9936-4604-80b9-5edd6ec81289/Untitled.png)
-
+![1 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/eb73a9cb-412a-4cba-b16a-3fc0d82d9599)
                                   *사진 1:자동차등록현황 및 이륜차신고현황*
 
-![                                     *사진 2: KB차차차 중고차 등록매물 건수*](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/e6776aac-2b10-415f-9087-877ec914b612/Untitled.png)
-
+![2 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5769231a-a2c6-4485-8a4a-08540a48f0e0)
                                      *사진 2: KB차차차 중고차 등록매물 건수*
 
 # 2. 프로젝트 작업 범위
@@ -48,7 +46,7 @@
 
 ## 2-2  일정관리 (WBS)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/b901f890-0da4-4029-8dc8-953b459e2735/Untitled.png)
+![3 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5cf354ca-6931-4f50-9870-a873e4b3abd4)
 
 # 3. 요구사항
 
@@ -116,17 +114,17 @@
 
 [farcar.damx](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/e546da64-df5c-4bc3-9e98-9f67627776b6/farcar.damx)
 
-![개념 모델링](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/0a245157-8537-45d6-a045-9f1a715414e1/Untitled.png)
+![4 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/a2d0b223-d35c-4a91-b17f-ad798da0dd53)
 
 개념 모델링
 
-![DA# 논리 모델](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/7018ab27-638d-435d-91fa-09042b66c39f/%EB%85%BC%EB%A6%AC.png)
+![5 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5244fae5-ee7e-4072-8042-3a3a0b6b4a8b)
 
 DA# 논리 모델
 
 ## 3-3 물리 모델링
 
-![DA# 물리 모델](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/03184111-e134-40a4-8c85-d26086120401/%EB%AC%BC%EB%A6%AC.png)
+![6 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/679900b8-54d8-4b47-b1ce-21b515c14e0d)
 
 DA# 물리 모델
 
