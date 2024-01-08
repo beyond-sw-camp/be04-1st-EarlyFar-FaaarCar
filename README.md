@@ -378,9 +378,14 @@ CREATE TABLE Reservation (
 
 <details>
 <summary>TC_001</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC001](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/cfc25f5b-c2e8-4570-b9f4-02a93c8dda57)
- 
+
+- **쿼리문**
+
 ```sql
 SELECT * FROM Member;
 
@@ -405,12 +410,19 @@ VALUES
 SELECT * FROM Member;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_002</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC002](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/ce509b73-3b04-4bf9-9b69-d407e2cd350a)
+
+- **쿼리문**
 
 ```sql
 SELECT  
@@ -434,12 +446,19 @@ SELECT
  WHERE Member_id = 4;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_003</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC003](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/f6ed9c81-57fc-412f-af00-8ed0a142f636)
+
+- **쿼리문**
 
 ```sql
 SELECT * FROM Login_log;
@@ -456,12 +475,19 @@ Values
 SELECT * FROM Login_log;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_004</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC004](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/ec69b70e-96c1-4088-8e12-96c122d35e2e)
+
+- **쿼리문**
 
 ```sql
 DELIMITER //
@@ -506,12 +532,19 @@ SELECT
 SELECT * FROM Member;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_005</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC005](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/0a87b591-562e-48bd-ad1b-cf0c0e7e4f85)
+
+- **쿼리문**
 
 ```sql
 SELECT
@@ -532,12 +565,19 @@ SELECT
  WHERE Member_id = 5;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_006</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC006](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/05552cbf-918c-47a3-a768-10a1f272b91d)
+
+- **쿼리문**
 
 ```sql
 SELECT 
@@ -561,12 +601,19 @@ SELECT
  WHERE Member_id = 5;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_007</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC007](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/a8ca0b29-1588-467c-a07d-ebab2b2bb4f4)
+
+- **쿼리문**
 
 ```sql
 SELECT 
@@ -576,12 +623,19 @@ SELECT
  WHERE a.dealer_id = 2;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_008</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC008](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/b529ec8e-ae8c-4f6b-be7f-07cbbc90b896)
+
+- **쿼리문**
 
 ```sql
 SELECT * FROM Car;
@@ -653,14 +707,21 @@ SELECT * FROM Accident_history;
 SELECT * FROM Inundation;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_009</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC009_1st](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/e53f2ab5-deb7-4d0f-972a-6f6d75cda1dd)
 
 ![TC009_2nd](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/a3a95e52-0643-4b6a-b965-3f81389dd689)
+
+- **쿼리문**
 
 ```sql
 -- Member 테이블에 대한 Trigger 정의
@@ -726,12 +787,19 @@ UPDATE Member
 SELECT * FROM Member;
 ```
 
+- **실행 결과**
+
 </details>
 
 <details>
 <summary>TC_010</summary>
+<br/>
+
+- **실행 화면**
 
 ![TC010](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/80423afd-51be-4129-94de-5c2ab6afa38b)
+
+- **쿼리문**
 
 ```sql
 CREATE VIEW CarOwnershipView AS
@@ -742,6 +810,8 @@ SELECT Car.Car_ID, Car.Car_model, Model.Model_name, Ownership_history.Current_Ow
 
 SELECT * FROM CarOwnershipView;
 ```
+
+- **실행 결과**
 
 </details>
 
