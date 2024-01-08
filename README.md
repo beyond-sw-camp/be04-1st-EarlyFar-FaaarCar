@@ -139,6 +139,11 @@ DA# 물리 모델
 <summary>DDL 구문</summary>
 <div markdown="1">
 
+- master server와 slave server가 Replication한 것을 확인 할 수 있으며, DDL이 성공적으로 생성되는 것을 확인할 수 있다.
+
+![script](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/c5872d05-2c16-4a84-88d7-c3efe9709d00)
+
+
 ```sql
 CREATE TABLE model (
 	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
@@ -353,7 +358,14 @@ CREATE TABLE Reservation (
 	CONSTRAINT FK_Member_TO_Reservation_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
 ) COMMENT = '예약내역';
 
+
+
 ```
+
+- 생성된 테이블들에 데이터들이 성공적으로 INSERT 되는 것을 확인할 수 있다.
+
+![insert](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/9e2f2ddc-bc41-4371-91e2-c0ef829c8129)
+
 
 </div>
 </details>
@@ -366,7 +378,9 @@ CREATE TABLE Reservation (
 
 <details>
 <summary>TC_001</summary>
-	
+
+![TC001](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/cfc25f5b-c2e8-4570-b9f4-02a93c8dda57)
+ 
 ```sql
 SELECT * FROM Member;
 
@@ -395,7 +409,9 @@ SELECT * FROM Member;
 
 <details>
 <summary>TC_002</summary>
-	
+
+![TC002](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/ce509b73-3b04-4bf9-9b69-d407e2cd350a)
+
 ```sql
 SELECT  
        Member_id
@@ -423,6 +439,8 @@ SELECT
 <details>
 <summary>TC_003</summary>
 
+![TC003](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/f6ed9c81-57fc-412f-af00-8ed0a142f636)
+
 ```sql
 SELECT * FROM Login_log;
 
@@ -442,6 +460,8 @@ SELECT * FROM Login_log;
 
 <details>
 <summary>TC_004</summary>
+
+![TC004](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/ec69b70e-96c1-4088-8e12-96c122d35e2e)
 
 ```sql
 DELIMITER //
@@ -491,6 +511,8 @@ SELECT * FROM Member;
 <details>
 <summary>TC_005</summary>
 
+![TC005](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/0a87b591-562e-48bd-ad1b-cf0c0e7e4f85)
+
 ```sql
 SELECT
        Member_id
@@ -514,6 +536,8 @@ SELECT
 
 <details>
 <summary>TC_006</summary>
+
+![TC006](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/05552cbf-918c-47a3-a768-10a1f272b91d)
 
 ```sql
 SELECT 
@@ -542,6 +566,8 @@ SELECT
 <details>
 <summary>TC_007</summary>
 
+![TC007](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/a8ca0b29-1588-467c-a07d-ebab2b2bb4f4)
+
 ```sql
 SELECT 
        b.Member_name, a.Review_grade, a.Review_contents 
@@ -554,6 +580,8 @@ SELECT
 
 <details>
 <summary>TC_008</summary>
+
+![TC008](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/b529ec8e-ae8c-4f6b-be7f-07cbbc90b896)
 
 ```sql
 SELECT * FROM Car;
@@ -630,6 +658,10 @@ SELECT * FROM Inundation;
 <details>
 <summary>TC_009</summary>
 
+![TC009_1st](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/e53f2ab5-deb7-4d0f-972a-6f6d75cda1dd)
+
+![TC009_2nd](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/a3a95e52-0643-4b6a-b965-3f81389dd689)
+
 ```sql
 -- Member 테이블에 대한 Trigger 정의
 DELIMITER //
@@ -698,6 +730,8 @@ SELECT * FROM Member;
 
 <details>
 <summary>TC_010</summary>
+
+![TC010](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/80423afd-51be-4129-94de-5c2ab6afa38b)
 
 ```sql
 CREATE VIEW CarOwnershipView AS
