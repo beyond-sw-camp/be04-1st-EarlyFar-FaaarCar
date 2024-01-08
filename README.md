@@ -389,7 +389,7 @@ DA# 물리 모델
     (Multi JOIN) |
     
     - 결과
-    1. **TC_001**
+     **TC_001**
     
     ```sql
     INSERT INTO User (
@@ -406,19 +406,19 @@ DA# 물리 모델
     );
     ```
     
-    1.  TC**002**
+      TC**002**
     
     ```sql
     update User set User_withdraw_check=1, User_withdraw_date=NOW() WHERE user_id = 4;
     ```
     
-    1. **TC_003**
+     **TC_003**
     
     ```sql
     INSERT INTO Login_log (Success_check, Attempt_date, Attempt_time, Attempt_region, User_ID) Values (1, NOW(), NOW(), '서울', 1);
     ```
     
-    1. **TC_004**
+     **TC_004**
     
     ```sql
     DELIMITER //
@@ -438,19 +438,19 @@ DA# 물리 모델
     DELIMITER ;
     ```
     
-    1. **TC_005**
+     **TC_005**
     
     ```sql
     update User set user_password='updatetest' WHERE User_id = 5;
     ```
     
-    1. **TC_006**
+     **TC_006**
     
     ```sql
     update User set user_nickname='testnickname', user_email='updatetest@gmail.com', user_phonenum='010-8888-8888', user_address='광주' WHERE User_id = 5;
     ```
     
-    1. **TC_007**
+     **TC_007**
     
     ```sql
     SELECT b.user_name, a.review_grade, a.review_contents 
@@ -459,7 +459,7 @@ DA# 물리 모델
      WHERE a.dealer_id = 2;
     ```
     
-    1. **TC_008**
+     **TC_008**
     
     ```sql
     -- Transaction 시작
@@ -517,7 +517,7 @@ DA# 물리 모델
     COMMIT;
     ```
     
-    1. **TC_009**
+     **TC_009**
     
     ```sql
     -- User 테이블에 대한 Trigger 정의
@@ -610,7 +610,7 @@ DA# 물리 모델
     SELECT * FROM USER;
     ```
     
-    1. **TC_010**
+     **TC_010**
     
     ```sql
     -- 이중 Join을 활용한 View 생성
