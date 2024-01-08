@@ -13,12 +13,10 @@
 
 한국 국토교통부 데이터 통합 채널에서 제공한 ‘자동차등록현황보고’ 통계에 따르면 전국적으로 자동차등록현황은 2010년을 기준으로 10년 동안 자동차에 대한 수요는 계속해서 증가하고 있다. 또한 국내 거대 규모 중고차 거래 플랫폼 중 하나인 KB차차차의 중고차 매물건수는 론칭했던 2016년 기준 15,247대에서 2018년에는 100,000대가 돌파되면서 2년 만에 8배 이상의 중고차 매물이 늘어 나는 것이 확인되었다. 결과적으로 중고차 시장의 급격한 성장으로 인해서, 수많은은 거래 및 정보가 생성되고 있고 이에 따라 중고차 관련 정보를 체계적으로 관리하여 금융 프로세스를 향상시킬 필요성이 생겼습니다.
 
-![                                  *사진 1:자동차등록현황 및 이륜차신고현황*](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/77a5173f-9936-4604-80b9-5edd6ec81289/Untitled.png)
-
+![1 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/eb73a9cb-412a-4cba-b16a-3fc0d82d9599)
                                   *사진 1:자동차등록현황 및 이륜차신고현황*
 
-![                                     *사진 2: KB차차차 중고차 등록매물 건수*](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/e6776aac-2b10-415f-9087-877ec914b612/Untitled.png)
-
+![2 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5769231a-a2c6-4485-8a4a-08540a48f0e0)
                                      *사진 2: KB차차차 중고차 등록매물 건수*
 
 # 2. 프로젝트 작업 범위
@@ -48,19 +46,18 @@
 
 ## 2-2  일정관리 (WBS)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/b901f890-0da4-4029-8dc8-953b459e2735/Untitled.png)
+![3 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5cf354ca-6931-4f50-9870-a873e4b3abd4)
 
 # 3. 요구사항
 
 요구사항 항목에서는 프로젝트 데이터베이스 구현에 필요한 기능적, 비기능적 요구사항 파악과 구현을 위한 구체적인 명세서 그리고 모델링과 모델 테스트 결과를 확인할 수 있습니다.
 
 ## 3-1 작업 명세서
+<details>
+<summary>요구사항 명세서</summary>
+<div markdown="1">
 
-- 요구사항 명세서
-    
-    
-    | 요구사항 ID | 기능유형
-    (기능/비기능) | 요구사항명 | 요구사항 내용 | 중요도(상/중/하) | 수용여부(O/X) |
+    | 요구사항 ID | 기능유형(기능/비기능) | 요구사항명 | 요구사항 내용 | 중요도(상/중/하) | 수용여부(O/X) |
     | --- | --- | --- | --- | --- | --- |
     | REQ001 | 기능 | 회원 가입 | 사용자는 중고차 거래 사이트에 회원으로 가입할 수 있어야 함 | 상 | O |
     | REQ002 | 기능 | 회원 탈퇴 | 회원은 원한다면 언제든지 회원 탈퇴 할 수 있어야 함 | 상 | O |
@@ -106,243 +103,256 @@
     | REQ042 | 기능 | 로그인 제한 | 일정 시간 내, 사용자의 로그인 실패 횟수가 5회 이상인 경우, 해당 회원 아이디의 로그인이 5분 동안 제한됨. | 상 | O |
     | REQ043 | 기능 | 로그인 내역 기록 | 사용자가 회원 로그인을 시도하면 그 내역이 기록되어야 함 | 상 | O |
 
+</div>
+</details>
+    
+  
+
 ## 3-2 개념 & 논리 모델링
 
 [farcar.damx](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/e546da64-df5c-4bc3-9e98-9f67627776b6/farcar.damx)
 
-![개념 모델링](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/0a245157-8537-45d6-a045-9f1a715414e1/Untitled.png)
+![4 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/a2d0b223-d35c-4a91-b17f-ad798da0dd53)
 
 개념 모델링
 
-![DA# 논리 모델](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/7018ab27-638d-435d-91fa-09042b66c39f/%EB%85%BC%EB%A6%AC.png)
+![5 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5244fae5-ee7e-4072-8042-3a3a0b6b4a8b)
 
 DA# 논리 모델
 
 ## 3-3 물리 모델링
 
-![DA# 물리 모델](https://prod-files-secure.s3.us-west-2.amazonaws.com/c78cddc1-c25c-4915-ab0f-e94172746e8b/03184111-e134-40a4-8c85-d26086120401/%EB%AC%BC%EB%A6%AC.png)
+![6 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/679900b8-54d8-4b47-b1ce-21b515c14e0d)
 
 DA# 물리 모델
 
 ## 3-4 DDL 구문 작성
+<details>
+<summary>DDL 구문</summary>
+<div markdown="1">
 
-- **DDL 구문**
+    ```sql
+    CREATE TABLE model (
+    	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
+    	Model_name	VARCHAR(255)	NOT NULL COMMENT '차종명',
+    	Model_description	TEXT NOT NULL COMMENT '차종 설명'
+    )COMMENT = '차종';
     
-```sql
-  CREATE TABLE model (
-	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
-	Model_name	VARCHAR(255)	NOT NULL COMMENT '차종명',
-	Model_description	TEXT NOT NULL COMMENT '차종 설명'
-)COMMENT = '차종';
-
-CREATE TABLE Car (
-	Car_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '자동차 ID',
-	Car_field	VARCHAR(255)	NOT NULL COMMENT '제조사',
-	Car_model	VARCHAR(255)	NOT NULL COMMENT '모델',
-	Car_year	INT	NOT NULL COMMENT '연식',
-	Car_mileage	INT	NOT NULL COMMENT '주행거리',
-	Car_condition	VARCHAR(255)	NOT NULL COMMENT '컨디션',
-	Car_transmission	VARCHAR(255)	NOT NULL COMMENT '변속기',
-	Car_oiltype	VARCHAR(255)	NOT NULL COMMENT '연료 종류',
-	Car_engine	VARCHAR(255)	NOT NULL COMMENT '엔진 크기',
-	Car_fuel_efficiency	INT	NOT NULL COMMENT '연비',
-	Accident_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '사고 여부',
-	Inundation_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '침수 여부',
-	Selling_price	INT	NOT NULL COMMENT '매물가격',
-	Picture_URL	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '사진 경로',
-	Picture_origin	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '원본사진 이름',
-	Picture_rename	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '사진 이름',
-	Model_ID	VARCHAR(255)	NOT NULL COMMENT '차종코드',
-  Insepction_record_URL  VARCHAR(255) NOT NULL COMMENT '성능점검기록부',
-  FOREIGN KEY(Model_ID) REFERENCES model (Model_ID)
-)COMMENT = '자동차';
-
-
-CREATE TABLE Ownership_history (
-	Ownership_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '소유이력ID',
-	Previous_Owner	VARCHAR(255)	NULL	DEFAULT '-' COMMENT '이전소유자',
-	Current_Owner	VARCHAR(255)	NOT NULL COMMENT '현재소유자',
-	Ownership_start	DATETIME	NOT NULL COMMENT '소유시작일',
-	Ownership_end	DATETIME	NOT NULL COMMENT '소유종료일',
-	Reason_transfer	TEXT	NOT NULL COMMENT '소유이전된이유',
-	Descript_transfer	TEXT	NOT NULL COMMENT '소유이전된상세설명',
-	Car_ID	INT	NOT NULL COMMENT '자동차 ID',
-  FOREIGN KEY(Car_ID) references Car(Car_ID)
-)COMMENT = '소유이력';
-
-CREATE TABLE Accident_History (
-	Accident_ID INT AUTO_INCREMENT COMMENT '차동자 사고 ID',
-	Accident_damage_degree INT NOT NULL COMMENT '피해정도',
-	Accident_date DATETIME NOT NULL COMMENT '발생 일자',
-	Insurance_claim_check TINYINT(1) NOT NULL DEFAULT 0 COMMENT '보험청구여부',
-	Car_ID INT NOT NULL COMMENT '자동차 ID',
-	CONSTRAINT PK_ACCIDENT_HISTORY PRIMARY KEY (Accident_ID),
-	CONSTRAINT FK_Inspection_record_TO_Accident_History_1 FOREIGN KEY (Car_ID) REFERENCES Car (Car_ID)
-)COMMENT = '자동차침수이력';
-
-CREATE TABLE Inundation (
-	Inundation_ID INT	AUTO_INCREMENT COMMENT '차동자 침수 ID',
-	Inundation_degree INT NOT NULL COMMENT '침수정도',
-	Inundation_date DATETIME NOT NULL COMMENT '발생 일자',
-	Car_ID INT NOT NULL COMMENT '자동차 ID',
-	CONSTRAINT PK_INUNDATION PRIMARY KEY (Inundation_ID),
-	CONSTRAINT FK_Inspection_record_TO_Inundation_1 FOREIGN KEY (Car_ID) REFERENCES Car (Car_ID)
-)COMMENT = '자동차침수이력';
-
-CREATE TABLE Member (
-	Member_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '회원ID',
-	Member_name	VARCHAR(255)	NOT NULL COMMENT '이름',
-	Member_nickname	VARCHAR(255)	NOT NULL COMMENT '닉네임',
-	Member_password	VARCHAR(255)	NOT NULL COMMENT '비밀번호',
-	Member_email	VARCHAR(255)	NOT NULL COMMENT '이메일',
-	Member_phoneNum	VARCHAR(255)	NOT NULL COMMENT '전화번호',
-	Member_address	VARCHAR(255)	NOT NULL COMMENT '주소',
-	Member_birth	DATETIME	NOT NULL COMMENT '생년월일',
-	Member_sign_up_date	DATETIME	NOT NULL COMMENT '가입일',
-	Member_coupon	INT	NULL	DEFAULT 0 COMMENT '보유 쿠폰',
-	Dealer_company	VARCHAR(255)	NULL COMMENT '딜러 회사명',
-	Dealer_region	VARCHAR(255)	NULL COMMENT '딜러 근무지',
-	Dealer_grade	INT	NULL COMMENT '딜러 등급',
-	Member_type	INT	NOT NULL COMMENT '회원 유형',
-	Member_blacklist	TINYINT(1)	NULL	DEFAULT 0 COMMENT '블랙회원여부',
-	Restriction_date	DATETIME	NULL COMMENT '제재 적용일',
-	Restriction_end_date	DATETIME	NULL COMMENT '제재 종료일',
-	Login_fail_stack	INT	NULL DEFAULT 0 COMMENT '로그인실패횟수',
-	Report_issue_stack	INT	NULL DEFAULT 0 COMMENT '누적신고횟수',
-	Login_restriction_check	TINYINT(1)	NULL	DEFAULT 0 COMMENT '접근제한여부',
-	Member_withdraw_check	TINYINT(1)	NULL	DEFAULT 0 COMMENT '탈퇴여부',
-	Member_withdraw_date DATE NULL COMMENT '탈퇴날짜'
-)COMMENT = '회원';
-
-CREATE TABLE Coupon (
-	Coupon_number INT AUTO_INCREMENT COMMENT '쿠폰 번호',
-	Coupon_date DATETIME NOT NULL COMMENT '발급 일자',
-	Coupon_usage_status TINYINT(1) NOT NULL DEFAULT 0 COMMENT '쿠폰 사용 상태',
-	Coupon_description TEXT NOT NULL COMMENT '쿠폰 설명',
-	Member_ID INT NOT NULL COMMENT '회원ID',
-	CONSTRAINT PK_COUPON PRIMARY KEY (Coupon_number),
-	CONSTRAINT FK_Member_TO_Coupon_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-) COMMENT = '쿠폰';
-
-CREATE TABLE Login_log (
-	Login_log_ID	INT AUTO_INCREMENT COMMENT '로그인내역ID',
-	Success_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '성공여부',
-	Attempt_date	DATE	NOT NULL COMMENT '시도날짜',
-	Attempt_time	TIME	NOT NULL COMMENT '시도시간',
-	Attempt_region	VARCHAR(255)	NOT NULL COMMENT '시도위치',
-	Member_ID	INT	NOT NULL COMMENT '회원ID',
-	CONSTRAINT pk_Login_log_ID PRIMARY KEY (Login_log_ID),
-	CONSTRAINT fk_Member_ID FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-) COMMENT = '로그인내역';
-
-
-CREATE TABLE Report (
-	Report_ID	INT AUTO_INCREMENT COMMENT '신고 ID',
-	Report_type	VARCHAR(255)	NOT NULL COMMENT '신고 유형',
-	Report_date	DATETIME	NOT NULL COMMENT '신고 일자',
-	Punish_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '처벌 여부',
-	Report_substance	TEXT	NOT NULL COMMENT '신고 내용',
-	Reporter_ID	INT	NOT NULL COMMENT '신고자 ID',
-	Reported_ID	INT	NOT NULL COMMENT '피신고자 ID',
-	CONSTRAINT pk_Report_ID PRIMARY KEY (Report_ID),
-  CONSTRAINT fk_Reporter_ID FOREIGN KEY (Reporter_ID) REFERENCES Member (Member_ID),
-	CONSTRAINT fk_Reported_ID FOREIGN KEY (Reported_ID) REFERENCES Member (Member_ID)
-)COMMENT = '신고내역';
-
-CREATE TABLE Penalty (
-	Penalty_ID	INT AUTO_INCREMENT COMMENT '제재 내역 ID',
-	Penalty_duration	DATETIME	NOT NULL COMMENT '제재 일자',
-	Penalty_type	VARCHAR(255)	NOT NULL COMMENT '제재 유형',
-	Penalty_reason	VARCHAR(255)	NOT NULL COMMENT '제재 사유',
-	Penalty_applydate	DATETIME	NOT NULL COMMENT '제재 적용일',
-	Penalty_enddate	DATETIME	NOT NULL COMMENT '제재 종료일',
-	Member_ID	INT	NOT NULL COMMENT '회원ID',
-	CONSTRAINT pk_Penalty_ID PRIMARY KEY (Penalty_ID),
-	CONSTRAINT fk_Member_ID_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-)COMMENT = '제재내역';
-
-
-CREATE TABLE Notice (
-	Notice_ID 	INT	AUTO_INCREMENT COMMENT '알림ID',
-	Notice_type	VARCHAR(255)	NULL COMMENT '알림유형',
-	Notice_description	TEXT	NULL COMMENT '알림설명',
-   Member_ID	INT	NOT NULL COMMENT '회원ID',
-	CONSTRAINT pk_Notice_ID PRIMARY KEY (Notice_ID),
-  CONSTRAINT fk_Member_ID_n FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-) COMMENT = '알림';
-
-
-CREATE TABLE Review (
-	Review_ID	INT AUTO_INCREMENT COMMENT '리뷰내역ID',
-	Review_contents	TEXT	Not NULL COMMENT '리뷰 내용',
-	Review_grade	VARCHAR(255)	Not NULL COMMENT '평가 등급',
-	Member_ID	INT	NOT NULL COMMENT '회원ID',
-  Dealer_ID INT NOT NULL COMMENT '판매자ID',
-	CONSTRAINT pk_Review_ID PRIMARY KEY (Review_ID),
-	CONSTRAINT fk_Member_ID_3 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID),
-  CONSTRAINT fk_Member_ID_d FOREIGN KEY (Dealer_ID) REFERENCES Member (Member_ID)
-)COMMENT = '리뷰내역';
-
-
-CREATE TABLE Board (
-	Board_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '게시판ID',
-	Board_type	VARCHAR(255)	NOT NULL COMMENT '게시판 유형',
-	Board_description	TEXT	NOT NULL COMMENT '게시판 설명'
-) COMMENT = '게시판';
-
-CREATE TABLE Post (
-	Post_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '게시물ID',
-	Post_title	VARCHAR(255)	NOT NULL COMMENT '게시물 제목',
-	Post_contents	TEXT	NOT NULL COMMENT '게시물 내용',
-	Post_date	DATETIME	NOT NULL COMMENT '게시물 작성일',
-	Post_hits	INT	NOT NULL	DEFAULT 0 COMMENT '조회수',
-	Post_last_update	DATETIME	NOT NULL	DEFAULT NOW() COMMENT '마지막 업데이트',
-	Post_type	VARCHAR(255)	NOT NULL COMMENT '게시물 유형',
-	Deal_date	DATETIME	NULL COMMENT '판매 완료 일자',
-	Report_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '신고 여부',
-	Car_ID	INT	NOT NULL COMMENT '차량ID',
-	Member_ID	INT	NOT NULL COMMENT '회원 ID',
-	Board_ID	INT	NOT NULL COMMENT '게시판ID',
-  FOREIGN KEY(Car_ID) References Car(Car_ID),
-  FOREIGN KEY(Member_ID) References Member(Member_ID),
-  FOREIGN KEY(Board_ID) References Board(Board_ID)
-) COMMENT = '게시물';
-
-
-CREATE TABLE Payment_History (
-	Payment_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '결제ID',
-	Payment_date	DATETIME	NOT NULL COMMENT '결제일',
-	Payment_method	VARCHAR(255)	NOT NULL COMMENT '결제수단',
-	Payment_amount	INT	NOT NULL COMMENT '결제금액',
-	Car_ID	INT	NOT NULL COMMENT '자동차 ID',
-	Member_ID	INT	NOT NULL COMMENT '회원ID',
-  FOREIGN KEY(Car_ID) References Car(Car_ID),
-  FOREIGN KEY(Member_ID) References Member(Member_ID)
-) COMMENT = '결제이력';
-
-CREATE TABLE Interested_Car (
-	Interested_Car_ID INT AUTO_INCREMENT COMMENT '구매관심차량ID',
-	Post_ID INT NOT NULL COMMENT '게시물ID',
-	Member_ID INT NOT NULL COMMENT '회원ID',
-	Chosen_time DATETIME NOT NULL COMMENT '찜한시간',
-	CONSTRAINT PK_INTERESTED_CAR PRIMARY KEY (Interested_Car_ID),
-	CONSTRAINT FK_Post_TO_Interested_Car_1 FOREIGN KEY (Post_ID) REFERENCES Post (Post_ID),
-	CONSTRAINT FK_Member_TO_Interested_Car_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-) COMMENT = '구매관심차량';
-
-CREATE TABLE Reservation (
-	Reservation_ID INT AUTO_INCREMENT COMMENT '예약 ID',
-	Reservation_status VARCHAR(255) NOT NULL COMMENT '예약상태',
-	Reservation_purpose VARCHAR(255) NOT NULL COMMENT '예약목적',
-	Reservation_date DATETIME	NOT NULL COMMENT '예약일자',
-	Post_ID INT NOT NULL COMMENT '게시물ID',
-	Member_ID INT NOT NULL COMMENT '회원ID',
-	CONSTRAINT PK_RESERVATION PRIMARY KEY (Reservation_ID),
-	CONSTRAINT FK_Post_TO_Reservation_1 FOREIGN KEY (Post_ID) REFERENCES Post (Post_ID),
-	CONSTRAINT FK_Member_TO_Reservation_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
-) COMMENT = '예약내역';
-```
+    CREATE TABLE Car (
+    	Car_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '자동차 ID',
+    	Car_field	VARCHAR(255)	NOT NULL COMMENT '제조사',
+    	Car_model	VARCHAR(255)	NOT NULL COMMENT '모델',
+    	Car_year	INT	NOT NULL COMMENT '연식',
+    	Car_mileage	INT	NOT NULL COMMENT '주행거리',
+    	Car_condition	VARCHAR(255)	NOT NULL COMMENT '컨디션',
+    	Car_transmission	VARCHAR(255)	NOT NULL COMMENT '변속기',
+    	Car_oiltype	VARCHAR(255)	NOT NULL COMMENT '연료 종류',
+    	Car_engine	VARCHAR(255)	NOT NULL COMMENT '엔진 크기',
+    	Car_fuel_efficiency	INT	NOT NULL COMMENT '연비',
+    	Accident_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '사고 여부',
+    	Inundation_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '침수 여부',
+    	Selling_price	INT	NOT NULL COMMENT '매물가격',
+    	Picture_URL	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '사진 경로',
+    	Picture_origin	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '원본사진 이름',
+    	Picture_rename	VARCHAR(255)	NOT NULL DEFAULT '-' COMMENT '사진 이름',
+    	Model_ID	VARCHAR(255)	NOT NULL COMMENT '차종코드',
+      Insepction_record_URL  VARCHAR(255) NOT NULL COMMENT '성능점검기록부',
+      FOREIGN KEY(Model_ID) REFERENCES model (Model_ID)
+    )COMMENT = '자동차';
     
+    CREATE TABLE Ownership_history (
+    	Ownership_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '소유이력ID',
+    	Previous_Owner	VARCHAR(255)	NULL	DEFAULT '-' COMMENT '이전소유자',
+    	Current_Owner	VARCHAR(255)	NOT NULL COMMENT '현재소유자',
+    	Ownership_start	DATETIME	NOT NULL COMMENT '소유시작일',
+    	Ownership_end	DATETIME	NOT NULL COMMENT '소유종료일',
+    	Reason_transfer	TEXT	NOT NULL COMMENT '소유이전된이유',
+    	Descript_transfer	TEXT	NOT NULL COMMENT '소유이전된상세설명',
+    	Car_ID	INT	NOT NULL COMMENT '자동차 ID',
+      FOREIGN KEY(Car_ID) references Car(Car_ID)
+    )COMMENT = '소유이력';
+    
+    CREATE TABLE Accident (
+    	Accident_code VARCHAR(255) NOT NULL COMMENT '사고  코드',
+    	Accident_type VARCHAR(255) NOT NULL COMMENT '사고 유형',
+    	Accident_description TEXT NOT NULL COMMENT '사고 유형 설명',
+    	CONSTRAINT PK_ACCIDENT PRIMARY KEY (Accident_code)
+    )COMMENT = '사고';
+    
+    CREATE TABLE Accident_History (
+    	Accident_ID INT AUTO_INCREMENT COMMENT '차동자 사고 ID',
+    	Accident_damage_degree INT NOT NULL COMMENT '피해정도',
+    	Accident_date DATETIME NOT NULL COMMENT '발생 일자',
+    	Insurance_claim_check TINYINT(1) NOT NULL DEFAULT 0 COMMENT '보험청구여부',
+    	Accident_code VARCHAR(255) NOT NULL COMMENT '사고  코드',
+    	Car_ID INT NOT NULL COMMENT '자동차 ID',
+    	CONSTRAINT PK_ACCIDENT_HISTORY PRIMARY KEY (Accident_ID),
+    	CONSTRAINT FK_Accident_TO_Accident_History_1 FOREIGN KEY (Accident_code) REFERENCES Accident (Accident_code),
+    	CONSTRAINT FK_Inspection_record_TO_Accident_History_1 FOREIGN KEY (Car_ID) REFERENCES Car (Car_ID)
+    )COMMENT = '자동차침수이력';
+    
+    CREATE TABLE Inundation (
+    	Inundation_ID INT	AUTO_INCREMENT COMMENT '차동자 침수 ID',
+    	Inundation_degree INT NOT NULL COMMENT '침수정도',
+    	Inundation_date DATETIME NOT NULL COMMENT '발생 일자',
+    	Accident_code VARCHAR(255)	NOT NULL COMMENT '사고  코드',
+    	Car_ID INT NOT NULL COMMENT '자동차 ID',
+    	CONSTRAINT PK_INUNDATION PRIMARY KEY (Inundation_ID),
+    	CONSTRAINT FK_Accident_TO_Inundation_1 FOREIGN KEY (Accident_code) REFERENCES Accident (Accident_code),
+    	CONSTRAINT FK_Inspection_record_TO_Inundation_1 FOREIGN KEY (Car_ID) REFERENCES Car (Car_ID)
+    )COMMENT = '자동차침수이력';
+    
+    CREATE TABLE USER (
+    	User_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '회원ID',
+    	User_name	VARCHAR(255)	NOT NULL COMMENT '이름',
+    	User_nickname	VARCHAR(255)	NOT NULL COMMENT '닉네임',
+    	User_password	VARCHAR(255)	NOT NULL COMMENT '비밀번호',
+    	User_email	VARCHAR(255)	NOT NULL COMMENT '이메일',
+    	User_phoneNum	VARCHAR(255)	NOT NULL COMMENT '전화번호',
+    	User_address	VARCHAR(255)	NOT NULL COMMENT '주소',
+    	User_birth	DATETIME	NOT NULL COMMENT '생년월일',
+    	User_sign_up_date	DATETIME	NOT NULL COMMENT '가입일',
+    	User_coupon	INT	NULL	DEFAULT 0 COMMENT '보유 쿠폰',
+    	Dealer_company	VARCHAR(255)	NULL COMMENT '딜러 회사명',
+    	Dealer_region	VARCHAR(255)	NULL COMMENT '딜러 근무지',
+    	Dealer_grade	INT	NULL COMMENT '딜러 등급',
+    	User_type	INT	NOT NULL COMMENT '회원 유형',
+    	User_blacklist	TINYINT(1)	NULL	DEFAULT 0 COMMENT '블랙회원여부',
+    	Restriction_date	DATETIME	NULL COMMENT '제재 적용일',
+    	Restriction_end_date	DATETIME	NULL COMMENT '제재 종료일',
+    	Login_fail_stack	INT	NULL DEFAULT 0 COMMENT '로그인실패횟수',
+    	Report_issue_stack	INT	NULL DEFAULT 0 COMMENT '누적신고횟수',
+    	Login_restriction_check	TINYINT(1)	NULL	DEFAULT 0 COMMENT '접근제한여부',
+    	User_withdraw_check	TINYINT(1)	NULL	DEFAULT 0 COMMENT '탈퇴여부',
+    	User_withdraw_date DATE NULL COMMENT '탈퇴날짜'
+    )COMMENT = '회원';
+    
+    CREATE TABLE Coupon (
+    	Coupon_number INT AUTO_INCREMENT COMMENT '쿠폰 번호',
+    	Coupon_date DATETIME NOT NULL COMMENT '발급 일자',
+    	Coupon_usage_status TINYINT(1) NOT NULL DEFAULT 0 COMMENT '쿠폰 사용 상태',
+    	Coupon_description TEXT NOT NULL COMMENT '쿠폰 설명',
+    	User_ID INT NOT NULL COMMENT '회원ID',
+    	CONSTRAINT PK_COUPON PRIMARY KEY (Coupon_number),
+    	CONSTRAINT FK_User_TO_Coupon_1 FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    )COMMENT = '쿠폰';
+    
+    CREATE TABLE Login_log (
+    	Login_log_ID	INT AUTO_INCREMENT COMMENT '로그인내역ID',
+    	Success_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '성공여부',
+    	Attempt_date	DATE	NOT NULL COMMENT '시도날짜',
+    	Attempt_time	TIME	NOT NULL COMMENT '시도시간',
+    	Attempt_region	VARCHAR(255)	NOT NULL COMMENT '시도위치',
+    	User_ID	INT	NOT NULL COMMENT '회원ID',
+    	CONSTRAINT pk_Login_log_ID PRIMARY KEY (Login_log_ID),
+    	CONSTRAINT fk_User_ID FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    ) COMMENT = '로그인내역';
+    
+    CREATE TABLE Report (
+    	Report_ID	INT AUTO_INCREMENT COMMENT '신고 ID',
+    	Report_type	VARCHAR(255)	NOT NULL COMMENT '신고 유형',
+    	Report_date	DATETIME	NOT NULL COMMENT '신고 일자',
+    	Punish_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '처벌 여부',
+    	Report_substance	TEXT	NOT NULL COMMENT '신고 내용',
+    	Reporter_ID	INT	NOT NULL COMMENT '신고자 ID',
+    	Reported_ID	INT	NOT NULL COMMENT '피신고자 ID',
+    	CONSTRAINT pk_Report_ID PRIMARY KEY (Report_ID),
+      CONSTRAINT fk_Reporter_ID FOREIGN KEY (Reporter_ID) REFERENCES User (User_ID),
+    	CONSTRAINT fk_Reported_ID FOREIGN KEY (Reported_ID) REFERENCES User (User_ID)
+    )COMMENT = '신고내역';
+    
+    CREATE TABLE Penalty (
+    	Penalty_ID	INT AUTO_INCREMENT COMMENT '제재 내역 ID',
+    	Penalty_duration	DATETIME	NOT NULL COMMENT '제재 일자',
+    	Penalty_type	VARCHAR(255)	NOT NULL COMMENT '제재 유형',
+    	Penalty_reason	VARCHAR(255)	NOT NULL COMMENT '제재 사유',
+    	Penalty_applydate	DATETIME	NOT NULL COMMENT '제재 적용일',
+    	Penalty_enddate	DATETIME	NOT NULL COMMENT '제재 종료일',
+    	User_ID	INT	NOT NULL COMMENT '회원ID',
+    	CONSTRAINT pk_Penalty_ID PRIMARY KEY (Penalty_ID),
+    	CONSTRAINT fk_User_ID_1 FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    )COMMENT = '제재내역';
+    
+    CREATE TABLE Notice (
+    	Notice_ID 	INT	AUTO_INCREMENT COMMENT '알림ID',
+    	Notice_type	VARCHAR(255)	NULL COMMENT '알림유형',
+    	Notice_description	TEXT	NULL COMMENT '알림설명',
+       User_ID	INT	NOT NULL COMMENT '회원ID',
+    	CONSTRAINT pk_Notice_ID PRIMARY KEY (Notice_ID),
+      CONSTRAINT fk_User_ID_n FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    ) COMMENT = '알림';
+    
+    CREATE TABLE Review (
+    	Review_ID	INT AUTO_INCREMENT COMMENT '리뷰내역ID',
+    	Review_contents	TEXT	Not NULL COMMENT '리뷰 내용',
+    	Review_grade	VARCHAR(255)	Not NULL COMMENT '평가 등급',
+    	User_ID	INT	NOT NULL COMMENT '회원ID',
+      Dealer_ID INT NOT NULL COMMENT '판매자ID',
+    	CONSTRAINT pk_Review_ID PRIMARY KEY (Review_ID),
+    	CONSTRAINT fk_User_ID_3 FOREIGN KEY (User_ID) REFERENCES User (User_ID),
+      CONSTRAINT fk_User_ID_d FOREIGN KEY (Dealer_ID) REFERENCES User (User_ID)
+    )COMMENT = '리뷰내역';
+    
+    CREATE TABLE Board (
+    	Board_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '게시판ID',
+    	Board_type	VARCHAR(255)	NOT NULL COMMENT '게시판 유형',
+    	Board_description	TEXT	NOT NULL COMMENT '게시판 설명'
+    ) COMMENT = '게시판';
+    
+    CREATE TABLE Post (
+    	Post_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '게시물ID',
+    	Post_title	VARCHAR(255)	NOT NULL COMMENT '게시물 제목',
+    	Post_contents	TEXT	NOT NULL COMMENT '게시물 내용',
+    	Post_date	DATETIME	NOT NULL COMMENT '게시물 작성일',
+    	Post_hits	INT	NOT NULL	DEFAULT 0 COMMENT '조회수',
+    	Post_last_update	DATETIME	NOT NULL	DEFAULT NOW() COMMENT '마지막 업데이트',
+    	Post_type	VARCHAR(255)	NOT NULL COMMENT '게시물 유형',
+    	Deal_date	DATETIME	NULL COMMENT '판매 완료 일자',
+    	Report_check	TINYINT(1)	NOT NULL	DEFAULT 0 COMMENT '신고 여부',
+    	Car_ID	INT	NOT NULL COMMENT '차량ID',
+    	User_ID	INT	NOT NULL COMMENT '회원 ID',
+    	Board_ID	INT	NOT NULL COMMENT '게시판ID',
+      FOREIGN KEY(Car_ID) References Car(Car_ID),
+      FOREIGN KEY(User_ID) References User(User_ID),
+      FOREIGN KEY(Board_ID) References Board(Board_ID)
+    ) COMMENT = '게시물';
+    
+    CREATE TABLE Payment_History (
+    	Payment_ID	INT	PRIMARY KEY AUTO_INCREMENT COMMENT '결제ID',
+    	Payment_date	DATETIME	NOT NULL COMMENT '결제일',
+    	Payment_method	VARCHAR(255)	NOT NULL COMMENT '결제수단',
+    	Payment_amount	INT	NOT NULL COMMENT '결제금액',
+    	Car_ID	INT	NOT NULL COMMENT '자동차 ID',
+    	User_ID	INT	NOT NULL COMMENT '회원ID',
+      FOREIGN KEY(Car_ID) References Car(Car_ID),
+      FOREIGN KEY(User_ID) References User(User_ID)
+    ) COMMENT = '결제이력';
+    
+    CREATE TABLE Interested_Car (
+    	Interested_Car_ID INT AUTO_INCREMENT COMMENT '구매관심차량ID',
+    	Post_ID INT NOT NULL COMMENT '게시물ID',
+    	User_ID INT NOT NULL COMMENT '회원ID',
+    	Chosen_time DATETIME NOT NULL COMMENT '찜한시간',
+    	CONSTRAINT PK_INTERESTED_CAR PRIMARY KEY (Interested_Car_ID),
+    	CONSTRAINT FK_Post_TO_Interested_Car_1 FOREIGN KEY (Post_ID) REFERENCES Post (Post_ID),
+    	CONSTRAINT FK_User_TO_Interested_Car_1 FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    ) COMMENT = '구매관심차량';
+    
+    CREATE TABLE Reservation (
+    	Reservation_ID INT AUTO_INCREMENT COMMENT '예약 ID',
+    	Reservation_status VARCHAR(255) NOT NULL COMMENT '예약상태',
+    	Reservation_purpose VARCHAR(255) NOT NULL COMMENT '예약목적',
+    	Reservation_date DATETIME	NOT NULL COMMENT '예약일자',
+    	Post_ID INT NOT NULL COMMENT '게시물ID',
+    	User_ID INT NOT NULL COMMENT '회원ID',
+    	CONSTRAINT PK_RESERVATION PRIMARY KEY (Reservation_ID),
+    	CONSTRAINT FK_Post_TO_Reservation_1 FOREIGN KEY (Post_ID) REFERENCES Post (Post_ID),
+    	CONSTRAINT FK_User_TO_Reservation_1 FOREIGN KEY (User_ID) REFERENCES User (User_ID)
+    ) COMMENT = '예약내역';
+    ```
+
+</div>
+</details>
 
 ## 4-테스트
 
@@ -379,7 +389,7 @@ CREATE TABLE Reservation (
     (Multi JOIN) |
     
     - 결과
-    1. **TC_001**
+     **TC_001**
     
     ```sql
     INSERT INTO User (
@@ -396,19 +406,19 @@ CREATE TABLE Reservation (
     );
     ```
     
-    1.  TC**002**
+      TC**002**
     
     ```sql
     update User set User_withdraw_check=1, User_withdraw_date=NOW() WHERE user_id = 4;
     ```
     
-    1. **TC_003**
+     **TC_003**
     
     ```sql
     INSERT INTO Login_log (Success_check, Attempt_date, Attempt_time, Attempt_region, User_ID) Values (1, NOW(), NOW(), '서울', 1);
     ```
     
-    1. **TC_004**
+     **TC_004**
     
     ```sql
     DELIMITER //
@@ -428,19 +438,19 @@ CREATE TABLE Reservation (
     DELIMITER ;
     ```
     
-    1. **TC_005**
+     **TC_005**
     
     ```sql
     update User set user_password='updatetest' WHERE User_id = 5;
     ```
     
-    1. **TC_006**
+     **TC_006**
     
     ```sql
     update User set user_nickname='testnickname', user_email='updatetest@gmail.com', user_phonenum='010-8888-8888', user_address='광주' WHERE User_id = 5;
     ```
     
-    1. **TC_007**
+     **TC_007**
     
     ```sql
     SELECT b.user_name, a.review_grade, a.review_contents 
@@ -449,7 +459,7 @@ CREATE TABLE Reservation (
      WHERE a.dealer_id = 2;
     ```
     
-    1. **TC_008**
+     **TC_008**
     
     ```sql
     -- Transaction 시작
@@ -507,7 +517,7 @@ CREATE TABLE Reservation (
     COMMIT;
     ```
     
-    1. **TC_009**
+     **TC_009**
     
     ```sql
     -- User 테이블에 대한 Trigger 정의
@@ -600,7 +610,7 @@ CREATE TABLE Reservation (
     SELECT * FROM USER;
     ```
     
-    1. **TC_010**
+     **TC_010**
     
     ```sql
     -- 이중 Join을 활용한 View 생성
