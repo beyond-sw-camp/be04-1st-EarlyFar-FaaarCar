@@ -131,8 +131,8 @@ DA# 물리 모델
 <summary>DDL 구문</summary>
 <div markdown="1">
 
-    ```sql
-  CREATE TABLE model (
+```sql
+CREATE TABLE model (
 	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
 	Model_name	VARCHAR(255)	NOT NULL COMMENT '차종명',
 	Model_description	TEXT NOT NULL COMMENT '차종 설명'
@@ -345,7 +345,7 @@ CREATE TABLE Reservation (
 	CONSTRAINT FK_Member_TO_Reservation_1 FOREIGN KEY (Member_ID) REFERENCES Member (Member_ID)
 ) COMMENT = '예약내역';
 
-    ```
+```
 
 </div>
 </details>
