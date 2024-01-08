@@ -1,5 +1,13 @@
-# be04-1st-EarlyFar-FaaarCar
-얼리멀리(Early&amp;Far) 3조입니다.
+# 멀리카아
+
+### 팀명: 얼리멀리(Early&amp;Far) 3조
+### 팀원
+- 팀원 : [이준형](https://github.com/jhlee6515)
+- 팀원 : [이재원](https://github.com/jlee38266)
+- 팀원 : [송동준](https://github.com/dongjunsong)
+- 팀원 : [정태원](https://github.com/t4e1)
+- 팀원 : [신동호](https://github.com/letsplaycoding)
+- 팀원 : [최종찬](https://github.com/CJC0512)
 
 ---
 
