@@ -370,6 +370,7 @@ CREATE TABLE Reservation (
 ```sql
 TC_001
 ```
+![TEST001_2024-01-08_18-17-45-ezgif com-speed](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/113569573/56f96b9e-a205-4a47-8dc9-09bdcdfc07fc)
 
 </details>
 
@@ -379,7 +380,7 @@ TC_001
 ```sql
 TC_002
 ```
-
+![TEST002_2024-01-08_18-19-22-ezgif com-speed](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/113569573/101b28bf-f89e-4753-9efe-8a759831e264)
 </details>
 
 <details>
@@ -392,6 +393,8 @@ TC_003
 </details>
 
 <details>
+
+ ![TEST003_2024-01-08_18-20-20-ezgif com-video-to-gif-converter](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/113569573/ef3a469f-26c8-4e0e-a10f-8fb32965aa78)
 <summary>TC_004</summary>
 
 ```sql
