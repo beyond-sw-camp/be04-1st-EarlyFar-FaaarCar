@@ -1,5 +1,5 @@
 # be04-1st-EarlyFar-FaaarCar
-얼리멀리(Early&amp;Far) 3조입니다.
+이재원,이준형,정태원,송동준,최종찬,신동호
 
 ---
 
