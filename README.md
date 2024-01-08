@@ -57,8 +57,7 @@
 <summary>요구사항 명세서</summary>
 <div markdown="1">
 
-    | 요구사항 ID | 기능유형
-    (기능/비기능) | 요구사항명 | 요구사항 내용 | 중요도(상/중/하) | 수용여부(O/X) |
+    | 요구사항 ID | 기능유형(기능/비기능) | 요구사항명 | 요구사항 내용 | 중요도(상/중/하) | 수용여부(O/X) |
     | --- | --- | --- | --- | --- | --- |
     | REQ001 | 기능 | 회원 가입 | 사용자는 중고차 거래 사이트에 회원으로 가입할 수 있어야 함 | 상 | O |
     | REQ002 | 기능 | 회원 탈퇴 | 회원은 원한다면 언제든지 회원 탈퇴 할 수 있어야 함 | 상 | O |
@@ -128,9 +127,10 @@ DA# 논리 모델
 DA# 물리 모델
 
 ## 3-4 DDL 구문 작성
+<details>
+<summary>DDL 구문</summary>
+<div markdown="1">
 
-- **DDL 구문**
-    
     ```sql
     CREATE TABLE model (
     	Model_ID	VARCHAR(255)	PRIMARY KEY COMMENT '차종코드',
@@ -350,7 +350,9 @@ DA# 물리 모델
     	CONSTRAINT FK_User_TO_Reservation_1 FOREIGN KEY (User_ID) REFERENCES User (User_ID)
     ) COMMENT = '예약내역';
     ```
-    
+
+</div>
+</details>
 
 ## 4-테스트
 
