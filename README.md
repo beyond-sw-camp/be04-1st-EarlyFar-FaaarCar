@@ -54,7 +54,7 @@
 
 ## 2-2  일정관리 (WBS)
 
-![3 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/5cf354ca-6931-4f50-9870-a873e4b3abd4)
+![img_wbs](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/1bac9e91-1146-4d6e-84f4-4aea6f54e562)
 
 # 3. 요구사항
 
