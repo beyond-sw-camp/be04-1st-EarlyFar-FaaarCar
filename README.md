@@ -364,236 +364,100 @@ CREATE TABLE Reservation (
 
 ![7 pic](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/35d855bb-5753-457f-828d-25ca70d49449)
 
-    - 결과
-     **TC_001**
-    
-    ```sql
-    INSERT INTO User (
-    	User_ID, User_name, User_nickname, User_password, User_email, User_phoneNum, User_address, User_birth,
-    	User_sign_up_date, User_coupon, Dealer_company, Dealer_region, Dealer_grade, User_type, User_blacklist,
-    	Restriction_date, Restriction_end_date, Login_fail_stack, Report_issue_stack, Login_restriction_check,
-    	User_withdraw_check, User_withdraw_date 
-    )
-    VALUES 
-    (
-     NULL, 
-     'test','test_nick','test_passwd','test@gmail.com','010-5678-1234','서울','2023-1-1 00:00:00', NOW(),
-      NULL,	'test_company',	 'test_region',  1,	1,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, 0,	NULL 
-    );
-    ```
-    
-      TC**002**
-    
-    ```sql
-    update User set User_withdraw_check=1, User_withdraw_date=NOW() WHERE user_id = 4;
-    ```
-    
-     **TC_003**
-    
-    ```sql
-    INSERT INTO Login_log (Success_check, Attempt_date, Attempt_time, Attempt_region, User_ID) Values (1, NOW(), NOW(), '서울', 1);
-    ```
-    
-     **TC_004**
-    
-    ```sql
-    DELIMITER //
-    
-    CREATE OR REPLACE TRIGGER LOGIN_FAIL_TR
-        AFTER INSERT 
-        ON Login_log
-        FOR EACH ROW
-    BEGIN 
-        IF NEW.Success_check = 0 THEN
-            UPDATE USER
-            SET Login_fail_stack = Login_fail_stack + 1
-            WHERE user_id = New.user_id; 
-        END IF;
-    END//
-    
-    DELIMITER ;
-    ```
-    
-     **TC_005**
-    
-    ```sql
-    update User set user_password='updatetest' WHERE User_id = 5;
-    ```
-    
-     **TC_006**
-    
-    ```sql
-    update User set user_nickname='testnickname', user_email='updatetest@gmail.com', user_phonenum='010-8888-8888', user_address='광주' WHERE User_id = 5;
-    ```
-    
-     **TC_007**
-    
-    ```sql
-    SELECT b.user_name, a.review_grade, a.review_contents 
-      FROM review a
-      JOIN User b ON a.dealer_id = b.user_id
-     WHERE a.dealer_id = 2;
-    ```
-    
-     **TC_008**
-    
-    ```sql
-    -- Transaction 시작
-    START TRANSACTION;
-    
-    -- 예시: 자동차 정보 삽입
-    INSERT INTO Car (
-    	  Car_ID, Car_field, Car_model, Car_year, Car_mileage, Car_condition, 
-    	  Car_transmission, Car_oiltype, Car_engine, Car_fuel_efficiency,
-    	  Accident_check, Inundation_check, Selling_price, Picture_URL, 
-    	  Picture_origin, Picture_rename, Model_ID, Insepction_record_URL
-    )
-    VALUES 
-    (
-    	 99, 'Hyundai', 'Sonata', 2019, 50000, 'Good', 'Automatic', 
-    	 'Gasoline', '2.0L', 15, 0, 0, 20000, '/images/sonata.jpg', 
-    	 'sonata_original.jpg', 'sonata_rename.jpg', 'M2', '/inspection/M2'
-    );
-    
-    -- 다른 테이블에도 삽입 또는 업데이트 등 필요한 작업 수행
-    -- Ownership_history insert
-    INSERT INTO Ownership_history (
-        Previous_Owner, Current_Owner, Ownership_start, Ownership_end, 
-    		Reason_transfer, Descript_transfer, Car_ID
-    )
-    VALUES 
-    (
-        '이재원', '이준형', '2021-04-03 09:00:00', '2023-03-15 17:30:00',
-        '직장 지역이동에 의한 판매', '차량 상태 우수, 주행거리 낮음', 99
-    );
-    
-    -- Accident_History insert
-    SELECT * FROM Accident_History;
-    INSERT INTO Accident_History (
-        Accident_damage_degree, Accident_date, Insurance_claim_check,
-        Accident_code, Car_ID
-    )
-    VALUES 
-    (
-        2, '2022-05-20 16:00:00',  1,
-        'FACD001', 99
-    );
-    
-    -- Inundation insert
-    SELECT * from Inundation;
-    INSERT INTO Inundation (
-        Inundation_degree, Inundation_date, Accident_code, Car_ID
-    )
-    VALUES 
-    (
-        3, '2022-07-10 10:15:00', 'DACD001', 99
-    );
-    
-    -- Transaction 종료
-    COMMIT;
-    ```
-    
-     **TC_009**
-    
-    ```sql
-    -- User 테이블에 대한 Trigger 정의
-    DELIMITER //
-    CREATE TRIGGER AfterReportUpdate
-    BEFORE UPDATE ON User
-    FOR EACH ROW
-    BEGIN
-      -- 누적신고횟수가 5의 배수일 때 제재 적용
-      IF NEW.Report_issue_stack % 5 = 0 AND NEW.Report_issue_stack < 30 THEN
-        SET NEW.User_blacklist = 1;
-        SET NEW.Restriction_date = NOW();
-        SET NEW.Restriction_end_date = DATE_ADD(NOW(), INTERVAL NEW.Report_issue_stack DAY);
-      END IF;
-    
-      -- 누적신고횟수가 30이 넘어가면 회원의 회원탈퇴 여부가 1(탈퇴)로 업데이트
-      IF NEW.Report_issue_stack >= 30 THEN
-     		SET NEW.User_withdraw_check = 1;
-     		SET NEW.User_withdraw_date = NOW();
-      END IF;
-    END;
-    //
-    DELIMITER ;
-    ```
-    
-    ```sql
-    
-    -- Trigger 적용 확인
-    SELECT * FROM user;
-    INSERT INTO User (
-    	User_ID, User_name, User_nickname, User_password, User_email, User_phoneNum,
-    	User_address, User_birth, User_sign_up_date, User_coupon, Dealer_company,
-    	Dealer_region, Dealer_grade, User_type, User_blacklist, Restriction_date, Restriction_end_date,
-    	Login_fail_stack, Report_issue_stack, Login_restriction_check, User_withdraw_check,
-    	User_withdraw_date 
-    )
-    VALUES 
-    (
-     99, 
-     '홍길동',
-     '회원닉네임이영',
-     'qlalfqjsgh1234',
-     'hongmail@daum.net',
-     '010-2222-5555',
-     '부산',
-     '1993-1-3 00:00:00',
-      NOW(),
-      NULL,	-- 보유쿠폰
-      NULL,	
-      NULL,  
-      NULL,	-- 딜러등급
-      0,	-- 회원유형 1=판매자 0=구매자
-      NULL,	-- 블랙 여부
-      NULL,	-- 제재 시작일
-      NULL,	-- 제재 종료일
-      NULL,	-- 로그인 실패 횟수
-      4,	-- 누적 신고 횟수
-      NULL,	-- 로그인 제한 여부
-      0,	-- 탈퇴여부
-      NULL -- 탈퇴날짜
-    ),
-    (
-     100, 
-     '홍구구',
-     '회원닉네임이영',
-     'qlalfqjsgh1234',
-     'hongmail@daum.net',
-     '010-2222-5555',
-     '대구',
-     '1996-1-3 00:00:00',
-      NOW(),
-      NULL,	-- 보유쿠폰
-      NULL,	
-      NULL,  
-      NULL,	-- 딜러등급
-      0,	-- 회원유형 1=판매자 0=구매자
-      1,	-- 블랙 여부
-      '2023-12-1 00:00:00',	-- 제재 시작일
-      '2023-12-26 00:00:00',	-- 제재 종료일
-      NULL,	-- 로그인 실패 횟수
-      28,	-- 누적 신고 횟수
-      NULL,	-- 로그인 제한 여부
-      0,	-- 탈퇴여부
-      NULL -- 탈퇴날짜
-    );
-    SELECT * FROM user;
-    UPDATE user SET report_issue_stack = report_issue_stack + 1 WHERE User_ID IN (99, 100);
-    SELECT * FROM USER;
-    UPDATE user SET report_issue_stack = report_issue_stack + 5 WHERE User_ID IN (99, 100);
-    SELECT * FROM USER;
-    ```
-    
-     **TC_010**
-    
-    ```sql
-    -- 이중 Join을 활용한 View 생성
-    CREATE VIEW CarOwnershipView AS
-    SELECT Car.Car_ID, Car.Car_model, Model.Model_name, Ownership_history.Current_Owner
-    FROM Car
-    JOIN Model ON Car.Model_ID = Model.Model_ID
-    JOIN Ownership_history ON Car.Car_ID = Ownership_history.Car_ID;
-    SELECT * FROM CarOwnershipView;cd 
-    ```
+<details>
+<summary>TC_001</summary>
+	
+```sql
+TC_001
+```
+
+</details>
+
+<details>
+<summary>TC_002</summary>
+	
+```sql
+TC_002
+```
+
+</details>
+
+<details>
+<summary>TC_003</summary>
+
+```sql
+TC_003
+```
+
+</details>
+
+<details>
+<summary>TC_004</summary>
+
+```sql
+TC_004
+```
+
+</details>
+
+<details>
+<summary>TC_005</summary>
+
+```sql
+TC_005
+```
+
+</details>
+
+<details>
+<summary>TC_006</summary>
+
+```sql
+TC_006
+```
+
+</details>
+
+<details>
+<summary>TC_007</summary>
+
+```sql
+TC_007
+```
+
+</details>
+
+<details>
+<summary>TC_008</summary>
+
+```sql
+TC_008
+```
+
+</details>
+
+<details>
+<summary>TC_009</summary>
+
+```sql
+TC_009
+```
+
+</details>
+
+<details>
+<summary>TC_010</summary>
+
+```sql
+TC_010
+```
+
+</details>
+
+
+
+
+
+
+
+
