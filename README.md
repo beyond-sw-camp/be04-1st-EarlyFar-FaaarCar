@@ -389,12 +389,13 @@ TC_002
 ```sql
 TC_003
 ```
-
+ ![TEST003_2024-01-08_18-20-20-ezgif com-video-to-gif-converter](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/113569573/ef3a469f-26c8-4e0e-a10f-8fb32965aa78)
+ 
 </details>
 
 <details>
 
- ![TEST003_2024-01-08_18-20-20-ezgif com-video-to-gif-converter](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/113569573/ef3a469f-26c8-4e0e-a10f-8fb32965aa78)
+
 <summary>TC_004</summary>
 
 ```sql
