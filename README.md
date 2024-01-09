@@ -423,6 +423,14 @@ SELECT * FROM Member;
 
 - **실행 결과**
 
+before
+
+![TC_001_result_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/9cfc05e2-f1b4-48a8-b21b-0c4e887cb0b0)
+
+after
+
+![TC_001_result_after](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/19b1994f-c92c-469d-9da2-f12a9821053d)
+
 </details>
 
 <details>
@@ -459,6 +467,14 @@ SELECT
 
 - **실행 결과**
 
+before
+
+![TC_002_result_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/bf3e3c10-ea2f-4ec2-9afc-0acbb74942bf)
+
+after
+
+![TC_002_result_after](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/431044f4-31e1-4cc5-b970-eaf78a33d394)
+
 </details>
 
 <details>
@@ -487,6 +503,14 @@ SELECT * FROM Login_log;
 ```
 
 - **실행 결과**
+
+before
+
+![TC_003_result_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/b29fd9cc-4cf0-47c9-9ba1-7a91bda04a96)
+
+after
+
+![TC_003_result_after](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/1df45151-6e34-49e3-a1ba-8aa26d3e554a)
 
 </details>
 
@@ -545,6 +569,10 @@ SELECT * FROM Member;
 
 - **실행 결과**
 
+result
+
+![TC_004_result](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/69db89f5-ff39-4540-89f7-f077d45a9409)
+
 </details>
 
 <details>
@@ -577,6 +605,14 @@ SELECT
 ```
 
 - **실행 결과**
+
+before
+
+![TC005_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/713a028f-92a1-4ac3-8ed3-cca5aef27c0e)
+
+after
+
+![TC005_result](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/4bcacc88-aeb3-40e1-ab51-57919c52fbce)
 
 </details>
 
@@ -614,6 +650,14 @@ SELECT
 
 - **실행 결과**
 
+before
+
+![TC006_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/7ecae523-b6f5-44df-ba74-047b600ff565)
+
+after
+
+![TC006_result](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/beb36303-a87d-4cde-ac00-e2daaf6f1ffc)
+
 </details>
 
 <details>
@@ -635,6 +679,10 @@ SELECT
 ```
 
 - **실행 결과**
+
+result
+
+![TC007_result](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/ff3bfa4c-861e-40ac-8466-4c5e656a9ac2)
 
 </details>
 
@@ -720,6 +768,14 @@ SELECT * FROM Inundation;
 
 - **실행 결과**
 
+before
+
+![TC008_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/9db8dde5-d4f9-4f15-b5d9-c88ee4a29bdd)
+
+after
+
+![TC008_result](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/ec8fa948-8998-49a6-a22c-3a55f9af8af7)
+
 </details>
 
 <details>
@@ -800,6 +856,16 @@ SELECT * FROM Member;
 
 - **실행 결과**
 
+before
+
+![TC009_before_r](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/732ef56a-f5ca-41e3-974f-c957b997a52e)
+
+after
+
+![TC009_result01](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/2af79046-d75c-47fb-a62b-9811c80bf27b)
+
+![TC009_result02](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/0aef3253-5190-48b4-b94c-0f07c4556150)
+
 </details>
 
 <details>
@@ -823,6 +889,14 @@ SELECT * FROM CarOwnershipView;
 ```
 
 - **실행 결과**
+
+before
+
+![TC010_before](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/0bca2e24-52b8-49a3-9af9-760bf98ed326)
+
+after
+
+![TC010_after](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/45275759/05b880f7-4f8d-4324-955e-b5fecf653984)
 
 </details>
 
