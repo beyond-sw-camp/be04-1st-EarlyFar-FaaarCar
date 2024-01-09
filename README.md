@@ -150,7 +150,11 @@ DA# 물리 모델
 <summary>DDL 구문</summary>
 <div markdown="1">
 
+
+
 - master server와 slave server가 Replication 한 것을 확인할 수 있으며, DDL이 성공적으로 생성되는 것을 확인할 수 있다.
+
+![script](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/blob/2e0919513e360b674106fde45172c2317d243859/image/master-slave.PNG)
 
 ![script](https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/152199695/c5872d05-2c16-4a84-88d7-c3efe9709d00)
 
