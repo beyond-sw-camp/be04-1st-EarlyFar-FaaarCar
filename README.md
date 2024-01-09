@@ -539,7 +539,7 @@ BEGIN
     END IF;
 END//
  
-DELIMITER;
+DELIMITER ;
 
 SELECT * FROM Login_log;
 
