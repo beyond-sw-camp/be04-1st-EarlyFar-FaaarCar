@@ -4,12 +4,23 @@
 
 ### 팀명: 얼리멀리(Early&amp;Far) 3조
 ### 팀원
-- 팀원 : [이준형](https://github.com/jhlee6515)
-- 팀원 : [이재원](https://github.com/jlee38266)
-- 팀원 : [송동준](https://github.com/dongjunsong)
-- 팀원 : [정태원](https://github.com/t4e1)
-- 팀원 : [신동호](https://github.com/letsplaycoding)
-- 팀원 : [최종찬](https://github.com/CJC0512)
+- 팀원 : **이준형** 
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/jhlee6515)
+
+- 팀원 : **이재원**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/jlee38266)
+
+- 팀원 : **송동준**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/dongjunsong)
+
+- 팀원 : **정태원**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/t4e1)
+
+- 팀원 : **신동호**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/letsplaycoding)
+
+- 팀원 : **최종찬**
+[<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/CJC0512)
 
 ---
 
@@ -52,7 +63,7 @@
 
 작업 수행공간: 서울 동작구 보라매로 SFC빌딩, 원격 소통
 
-프로젝트 구현 도구: MariaDB 10.11.6-GA, Linux Ubuntu 20.04.6 LTS
+프로젝트 구현 도구: MariaDB 10.3.38, Linux Ubuntu 20.04.6 LTS
 
 ## 2-2  일정관리 (WBS)
 
